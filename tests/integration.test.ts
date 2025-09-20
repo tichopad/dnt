@@ -72,7 +72,7 @@ Deno.test("should build test project - basic", async () => {
         },
       },
       scripts: {
-        test: "node test_runner.js",
+        test: "node test_runner.cjs",
       },
       dependencies: {
         tslib: versions.tsLib,
@@ -116,7 +116,7 @@ Deno.test("should build test project - basic", async () => {
 /esm/_dnt.test_shims.d.ts
 /script/_dnt.test_shims.js
 /script/_dnt.test_shims.d.ts
-/test_runner.js
+/test_runner.cjs
 yarn.lock
 pnpm-lock.yaml
 `,
@@ -150,7 +150,7 @@ Deno.test("should build test project without esm", async () => {
       version: "1.0.0",
       main: "./script/mod.js",
       scripts: {
-        test: "node test_runner.js",
+        test: "node test_runner.cjs",
       },
       types: "./types/mod.d.ts",
       dependencies: {
@@ -181,7 +181,7 @@ Deno.test("should build test project without esm", async () => {
 /types/_dnt.test_polyfills.d.ts
 /script/_dnt.test_shims.js
 /types/_dnt.test_shims.d.ts
-/test_runner.js
+/test_runner.cjs
 yarn.lock
 pnpm-lock.yaml
 `,
@@ -231,7 +231,7 @@ Deno.test("should build with all options off", async () => {
     assertEquals(
       output.npmIgnore,
       `/src/
-/test_runner.js
+/test_runner.cjs
 yarn.lock
 pnpm-lock.yaml
 `,
@@ -297,7 +297,7 @@ Deno.test("should build test project with declarations inline by default", async
           },
         },
         scripts: {
-          test: "node test_runner.js",
+          test: "node test_runner.cjs",
         },
         dependencies: {
           tslib: versions.tsLib,
@@ -373,7 +373,7 @@ Deno.test("should build bin project", async () => {
         add: "./esm/mod.js",
       },
       scripts: {
-        test: "node test_runner.js",
+        test: "node test_runner.cjs",
       },
       devDependencies: {
         "@types/node": versions.nodeTypes,
@@ -418,7 +418,7 @@ Deno.test("should build bin project with a shebang", async () => {
         hello: "./esm/main.js",
       },
       scripts: {
-        test: "node test_runner.js",
+        test: "node test_runner.cjs",
       },
       devDependencies: {
         picocolors: versions.picocolors,
@@ -515,7 +515,7 @@ Deno.test("not error for TLA when not using CommonJS", async () => {
         },
       },
       scripts: {
-        test: "node test_runner.js",
+        test: "node test_runner.cjs",
       },
       types: "./types/mod.d.ts",
       devDependencies: {
@@ -590,7 +590,7 @@ Deno.test("should build with source maps", async () => {
 /script/_dnt.test_shims.js
 /script/_dnt.test_shims.js.map
 /script/_dnt.test_shims.d.ts
-/test_runner.js
+/test_runner.cjs
 yarn.lock
 pnpm-lock.yaml
 `,
@@ -636,7 +636,7 @@ Deno.test("should build with package mappings", async () => {
         },
       },
       scripts: {
-        test: "node test_runner.js",
+        test: "node test_runner.cjs",
       },
       types: "./types/mod.d.ts",
       dependencies: {
@@ -659,7 +659,7 @@ Deno.test("should build with package mappings", async () => {
 /esm/_dnt.test_shims.js
 /script/_dnt.test_shims.js
 /types/_dnt.test_shims.d.ts
-/test_runner.js
+/test_runner.cjs
 yarn.lock
 pnpm-lock.yaml
 `,
@@ -705,7 +705,7 @@ Deno.test("should build with peer dependencies in mappings", async () => {
         },
       },
       scripts: {
-        test: "node test_runner.js",
+        test: "node test_runner.cjs",
       },
       types: "./types/mod.d.ts",
       peerDependencies: {
@@ -1171,7 +1171,7 @@ Deno.test("should build jsr project", async () => {
         },
       },
       scripts: {
-        test: "node test_runner.js",
+        test: "node test_runner.cjs",
       },
       dependencies: {
         tslib: versions.tsLib,
@@ -1195,7 +1195,7 @@ Deno.test("should build jsr project", async () => {
 /esm/_dnt.test_shims.d.ts
 /script/_dnt.test_shims.js
 /script/_dnt.test_shims.d.ts
-/test_runner.js
+/test_runner.cjs
 yarn.lock
 pnpm-lock.yaml
 `,
@@ -1241,7 +1241,7 @@ Deno.test("should build workspace project", async () => {
           },
         },
         scripts: {
-          test: "node test_runner.js",
+          test: "node test_runner.cjs",
         },
         dependencies: {
           tslib: versions.tsLib,
@@ -1254,7 +1254,7 @@ Deno.test("should build workspace project", async () => {
       assertEquals(
         output.npmIgnore,
         `/src/
-/test_runner.js
+/test_runner.cjs
 yarn.lock
 pnpm-lock.yaml
 `,

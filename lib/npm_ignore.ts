@@ -51,7 +51,7 @@ export function getNpmIgnoreText(options: {
         yield `/types/${dtsFilePath}`;
       }
     }
-    yield "/test_runner.js";
+    yield "/test_runner.cjs";
   }
 
   function isUsingSourceMaps() {
