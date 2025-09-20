@@ -16,7 +16,9 @@ export function getTestRunnerCode(options: {
     // ensure compatibility with esm ("type": "module")
     writer.writeLine(`import { createRequire } from 'module';`);
     writer.writeLine(`const require = createRequire(import.meta.url);`);
-    writer.writeLine(`const __dirname = new URL(".", import.meta.url).pathname;`);
+    writer.writeLine(
+      `const __dirname = new URL(".", import.meta.url).pathname;`,
+    );
   }
 
   writer.writeLine(`const pc = require("picocolors");`)
