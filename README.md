@@ -6,7 +6,7 @@ Deno to npm package build tool.
 
 ## What does this do?
 
-Takes a Deno module and creates an npm package for use in Node.js.
+Takes a Deno module and creates a Node.js compatible npm package.
 
 See [@deno/dnt README for more details](https://github.com/denoland/dnt/blob/main/README.md). This README will focus on what's different.
 
