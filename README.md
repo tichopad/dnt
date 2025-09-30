@@ -8,8 +8,12 @@ Deno to npm package build tool.
 
 Takes a Deno module and creates a Node.js compatible npm package.
 
-See [@deno/dnt README for more details](https://github.com/denoland/dnt/blob/main/README.md). This README will focus on what's different.
+See
+[@deno/dnt README for more details](https://github.com/denoland/dnt/blob/main/README.md).
+This README will focus on what's different.
 
 ## What's different?
 
-This fork fixes ESM compatibility issues with the output produced by the original project. See [the issue for more details](https://github.com/denoland/dnt/issues/476).
+This fork fixes ESM compatibility issues with the output produced by the
+original project. See
+[the issue for more details](https://github.com/denoland/dnt/issues/476).
